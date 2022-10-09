@@ -1,0 +1,172 @@
+/* Стилізація розмежувача завдань */
+
+hr {
+  margin: -30px auto 10px;
+  padding: 0;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #1f1209;
+  box-shadow: 0 20px 20px -20px #333;
+  width: 95%;
+}
+
+/* Завдання 1 */
+
+input[type="checkbox"]:checked + label {
+  color: red;
+}
+
+input[type="radio"]:checked + label {
+  color: red;
+}
+
+/* Завдання 2 */
+
+ul li:nth-child(3n) {
+  color: #ffd800;
+}
+
+ul li:nth-child(5n):hover {
+  background-color: #ffd800;
+}
+
+li::first-letter {
+  color: red;
+}
+
+li {
+  list-style: none;
+}
+
+li:before {
+  background-image: url(/Homework1/png);
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  content: "";
+}
+
+/* Завдання 3 */
+
+abbr:first-line {
+  color: aqua;
+}
+
+p.new.back:after {
+  content: '!';
+}
+
+/* Помилка у селекторі div: before: first-letter */
+
+p.new:before {
+  content: 'Кожний псевдоелемент може застосовуватися тільки до одного селектора. ';
+}
+
+a.new:hover::before {
+  color: red;
+}
+
+/* Завдання 4 */
+
+.task_4 {
+  background-image: linear-gradient(-45deg, #7fffd4 10%, #f0ffff 30%);
+}
+
+a[href*="htmlweb"] {
+  color: blueviolet;
+}
+
+div > a[href*="htmlweb"] {
+  background: radial-gradient(
+    at center bottom,
+    rgb(114, 30, 30),
+    rgb(206, 184, 184)
+  );
+}
+
+a:nth-child(2):hover,
+a[href$="/css"]:hover {
+  color: red;
+  border: 2px inset red;
+  border-radius: 10px 100px / 120px;
+}
+
+div ~ a:visited {
+    color: #ffd800;
+}
+
+/* Завдання 5 */
+
+.task5 > a {
+  color: #000000;
+}
+
+/* Зміна відповідного кольору при наведенні на посилання */
+
+.task5 > a[href="red"]:hover {
+  color: red;
+}
+
+.task5 > a[href="green"]:hover {
+  color: green;
+}
+
+.task5 > a[href="blue"]:hover {
+  color: blue;
+}
+
+/* Виділення посилання відповідно з заданим кольором */
+
+.task5 > a[href="red"]::selection {
+  background: red;
+}
+
+.task5 > a[href="green"]::selection {
+  background: green;
+}
+
+.task5 > a[href="blue"]::selection {
+  background: blue;
+}
+
+/* Колір першої букви кожного абзацу */
+
+a + p::first-letter {
+  color: red;
+}
+
+a + p + p::first-letter {
+  color: green;
+}
+
+a + p + p + p::first-letter {
+  color: blue;
+}
+
+/* Виділля заданього фону абзацу відповідним кольором */
+
+a + p::selection  {
+  background: red;
+}
+
+a + p + p::selection  {
+  background: green;
+}
+
+a + p + p + p::selection  {
+  background: blue;
+}
+
+/* Зміна кольору, коли користувач наводе, фокусується або взаємодіє з абзацом */
+
+a + p:active {
+  color: red;
+}
+
+a + p + p:active {
+  color: green;
+}
+
+a + p + p + p:active {
+  color: blue;
+}
